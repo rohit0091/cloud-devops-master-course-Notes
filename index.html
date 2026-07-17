@@ -21,17 +21,15 @@
       <h1>⚡ CLOUD STUDY PORTAL</h1>
     </div>
     <div class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('read')">📖 Read Notes</button>
-      <button class="tab-btn" onclick="switchTab('quiz')">✍️ Practice Quiz</button>
-      <button class="tab-btn" onclick="switchTab('verifier')">🛠️ Lab Verifier</button>
-      <button class="tab-btn" onclick="switchTab('glossary')">🔍 Glossary Search</button>
+      <button class="tab-btn active" id="tab-btn-read" onclick="switchTab('read')">📖 Read Notes</button>
+      <button class="tab-btn" id="tab-btn-quiz" onclick="switchTab('quiz')">✍️ Practice Quiz</button>
     </div>
   </header>
 
   <!-- Main Body Layout -->
   <div class="main-layout">
     
-    <!-- Sidebar Course Menu (Used in Read and Quiz modes) -->
+    <!-- Sidebar Course Menu -->
     <aside id="sidebar">
       <div class="sidebar-title">Course Modules</div>
       <ul class="module-list" id="sidebar-list">
@@ -50,101 +48,48 @@
 
       <!-- TAB: PRACTICE QUIZ -->
       <section id="tab-quiz" class="tab-content" style="display: none;">
-        <div class="quiz-container" id="quiz-box">
-          <!-- Quiz Loaded Dynamically -->
-          <div class="quiz-header">
-            <div class="quiz-title">Quiz Dashboard</div>
-            <div id="quiz-progress">0/0</div>
-          </div>
-          <div class="question-text" id="q-text">Please select a module from the sidebar to start its practice quiz.</div>
-          <ul class="options-list" id="q-options">
-            <!-- Options dynamically loaded -->
-          </ul>
-          <div class="explanation-panel" id="q-explanation">
-            <!-- Explanation -->
-          </div>
-          <div class="quiz-footer">
-            <button class="btn-primary" id="btn-next-quiz" style="display: none;" onclick="loadNextQuestion()">Next Question &rarr;</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- TAB: LAB VERIFIER -->
-      <section id="tab-verifier" class="tab-content" style="display: none;">
-        <div class="verifier-container">
-          <div class="verifier-header">
-            <h2>Local Environment Lab Verifier</h2>
-            <p>Verify that your local computer has the necessary system tools and configurations set up for hands-on exercises.</p>
-          </div>
-
-          <div class="verifier-grid">
-            <!-- Tool 1: Git -->
-            <div class="verifier-card">
-              <div class="verifier-info">
-                <h3>Git Installation</h3>
-                <p>Verifies if the git version control command runs on your terminal.</p>
+        <div class="quiz-layout">
+          
+          <!-- Left Column: Question Work Area -->
+          <div class="quiz-workspace">
+            <div class="quiz-container" id="quiz-box">
+              <div class="quiz-header">
+                <div class="quiz-title" id="quiz-module-title">Quiz Dashboard</div>
+                <div id="quiz-progress">0/0</div>
               </div>
-              <div class="verifier-status">
-                <span class="status-badge unchecked" id="status-git">Unchecked</span>
-                <button class="btn-verify" onclick="runVerification('git')">Verify</button>
-              </div>
-            </div>
-
-            <!-- Tool 2: Docker -->
-            <div class="verifier-card">
-              <div class="verifier-info">
-                <h3>Docker Daemon</h3>
-                <p>Checks if the Docker CLI is active and can connect to the daemon.</p>
-              </div>
-              <div class="verifier-status">
-                <span class="status-badge unchecked" id="status-docker">Unchecked</span>
-                <button class="btn-verify" onclick="runVerification('docker')">Verify</button>
-              </div>
-            </div>
-
-            <!-- Tool 3: AWS CLI -->
-            <div class="verifier-card">
-              <div class="verifier-info">
-                <h3>AWS Configuration</h3>
-                <p>Checks if your local AWS CLI is configured with credentials.</p>
-              </div>
-              <div class="verifier-status">
-                <span class="status-badge unchecked" id="status-aws">Unchecked</span>
-                <button class="btn-verify" onclick="runVerification('aws')">Verify</button>
-              </div>
-            </div>
-
-            <!-- Tool 4: Python -->
-            <div class="verifier-card">
-              <div class="verifier-info">
-                <h3>Python Runtime</h3>
-                <p>Verifies if Python 3 is active and prints the system version.</p>
-              </div>
-              <div class="verifier-status">
-                <span class="status-badge unchecked" id="status-python">Unchecked</span>
-                <button class="btn-verify" onclick="runVerification('python')">Verify</button>
+              
+              <div id="quiz-active-area">
+                <div class="question-text" id="q-text">Please select a module from the sidebar to start its practice quiz.</div>
+                <ul class="options-list" id="q-options">
+                  <!-- Options dynamically loaded -->
+                </ul>
+                <div class="explanation-panel" id="q-explanation">
+                  <!-- Explanation dynamic -->
+                </div>
+                <div class="quiz-footer">
+                  <button class="btn-secondary" id="btn-prev-quiz" onclick="loadPrevQuestion()">&larr; Previous</button>
+                  <button class="btn-primary" id="btn-next-quiz" onclick="loadNextQuestion()">Next &rarr;</button>
+                </div>
               </div>
             </div>
           </div>
+          
+          <!-- Right Column: Navigation Grid Panel -->
+          <div class="quiz-navigation-panel" id="quiz-nav-panel" style="display: none;">
+            <div class="nav-panel-header">
+              <h3>Quiz Progress</h3>
+              <button class="btn-redo" onclick="redoCurrentQuiz()">🔄 Restart</button>
+            </div>
+            
+            <div class="score-summary" id="score-display">
+              Score: 0 / 25
+            </div>
+            
+            <div class="question-grid" id="q-grid">
+              <!-- Grid boxes 1 to 25 -->
+            </div>
+          </div>
 
-          <div class="verifier-header">
-            <h3>Terminal Output Logs</h3>
-          </div>
-          <div class="terminal-console" id="console-output">
-$ study_server diagnostics active. Click "Verify" to audit a tool...
-          </div>
-        </div>
-      </section>
-
-      <!-- TAB: GLOSSARY SEARCH -->
-      <section id="tab-glossary" class="tab-content" style="display: none;">
-        <div class="search-container">
-          <div class="search-input-wrapper">
-            <input type="text" class="search-field" id="search-query" oninput="filterGlossary()" placeholder="Search terms, acronyms, or definitions...">
-          </div>
-          <div class="glossary-results" id="glossary-list">
-            <!-- Glossary dynamically loaded -->
-          </div>
         </div>
       </section>
 
@@ -158,10 +103,15 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
     let quizQuestions = [];
     let currentQuizIndex = 0;
 
+    // Track user answers for the current session
+    // userAnswers[questionIndex] = selectedOptionIndex
+    let userAnswers = {};
+    // userResults[questionIndex] = true/false (correct/incorrect)
+    let userResults = {};
+
     // Load Sidebar on Boot
     window.addEventListener('DOMContentLoaded', () => {
       renderSidebar();
-      filterGlossary(); // Initial glossary load
       
       // Auto-load first module
       if (COURSE_DATA.modules.length > 0) {
@@ -186,14 +136,6 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
     // Switch between study tabs
     function switchTab(tabId) {
       currentActiveTab = tabId;
-      
-      // Toggle sidebar visibility (only show for read/quiz notes context)
-      const sidebar = document.getElementById('sidebar');
-      if (tabId === 'verifier' || tabId === 'glossary') {
-        sidebar.style.display = 'none';
-      } else {
-        sidebar.style.display = 'flex';
-      }
 
       // Toggle tab contents
       document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
@@ -201,8 +143,7 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
 
       // Toggle active states of buttons
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(tabId));
-      if (activeBtn) activeBtn.classList.add('active');
+      document.getElementById('tab-btn-' + tabId).classList.add('active');
 
       // If switching to quiz, load the current module's quiz
       if (tabId === 'quiz') {
@@ -225,7 +166,7 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
       }
     }
 
-    // Dynamic Markdown Loader and Regex Parser (Offline friendly)
+    // Dynamic Markdown Loader and Regex Parser
     function loadMarkdown(moduleId) {
       const targetModule = COURSE_DATA.modules.find(m => m.id === moduleId);
       const reader = document.getElementById('tab-read');
@@ -248,7 +189,7 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
           reader.innerHTML = parseMarkdown(text);
         })
         .catch(err => {
-          reader.innerHTML = `<h1>Error Loading Guide</h1><p>Unable to load ${targetModule.file}. Ensure study_server.py is running and accessing local folder files.</p>`;
+          reader.innerHTML = `<h1>Error Loading Guide</h1><p>Unable to load ${targetModule.file}. Ensure study_server.js is running and accessing local folder files.</p>`;
         });
     }
 
@@ -272,9 +213,7 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
       
       // Bullet lists
       html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
-      // Wrap consecutive <li> elements in <ul>
       html = html.replace(/(<li>.*<\/li>)/gim, '<ul>$1</ul>');
-      // Clean duplicate nested <ul> tags
       html = html.replace(/<\/ul>\s*<ul>/g, '');
 
       // Bold (**bold**)
@@ -284,7 +223,6 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
       html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 
       // Convert line breaks to paragraphs where appropriate
-      // Split by double line break and wrap in <p> if not matching tags
       const blocks = html.split(/\n\s*\n/);
       const parsedBlocks = blocks.map(block => {
         const trimmed = block.trim();
@@ -298,143 +236,171 @@ $ study_server diagnostics active. Click "Verify" to audit a tool...
       return parsedBlocks.join('\n');
     }
 
-    // Interactive Quiz Engine
+    // Interactive Advanced Quiz Engine
     function initQuizForModule(moduleId) {
+      const targetModule = COURSE_DATA.modules.find(m => m.id === moduleId);
+      document.getElementById('quiz-module-title').innerText = targetModule ? targetModule.title : "Quiz Dashboard";
+      
       quizQuestions = COURSE_DATA.mcqs.filter(q => q.module === moduleId);
+      
+      // Reset current session tracking arrays
+      userAnswers = {};
+      userResults = {};
       currentQuizIndex = 0;
+
+      const activeArea = document.getElementById('quiz-active-area');
+      const navPanel = document.getElementById('quiz-nav-panel');
+
+      if (quizQuestions.length === 0) {
+        document.getElementById('quiz-progress').innerText = '0/0';
+        document.getElementById('q-text').innerText = "No practice MCQs found for this specific module.";
+        document.getElementById('q-options').innerHTML = '';
+        document.getElementById('q-explanation').style.display = 'none';
+        activeArea.style.display = 'block';
+        navPanel.style.display = 'none';
+        return;
+      }
+
+      navPanel.style.display = 'flex';
+      activeArea.style.display = 'block';
+
+      // Render Navigation Grid
+      renderNavigationGrid();
+      updateScoreSummary();
+
+      // Load First Question
+      loadQuestion(0);
+    }
+
+    function renderNavigationGrid() {
+      const grid = document.getElementById('q-grid');
+      grid.innerHTML = '';
+
+      quizQuestions.forEach((_, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'grid-item';
+        btn.id = 'grid-btn-' + idx;
+        btn.innerText = idx + 1;
+        btn.onclick = () => loadQuestion(idx);
+        grid.appendChild(btn);
+      });
+    }
+
+    function updateScoreSummary() {
+      const correctCount = Object.values(userResults).filter(val => val === true).length;
+      const totalAnswered = Object.keys(userAnswers).length;
+      document.getElementById('score-display').innerText = `Score: ${correctCount} / ${quizQuestions.length} (${totalAnswered} Answered)`;
+    }
+
+    function loadQuestion(index) {
+      currentQuizIndex = index;
+      const q = quizQuestions[index];
       
       const qText = document.getElementById('q-text');
       const qOptions = document.getElementById('q-options');
       const qExpl = document.getElementById('q-explanation');
+      const prevBtn = document.getElementById('btn-prev-quiz');
       const nextBtn = document.getElementById('btn-next-quiz');
       const progress = document.getElementById('quiz-progress');
 
-      qExpl.style.display = 'none';
-      nextBtn.style.display = 'none';
-
-      if (quizQuestions.length === 0) {
-        progress.innerText = '0/0';
-        qText.innerText = "No practice MCQs found in database for this specific module.";
-        qOptions.innerHTML = '';
-        return;
-      }
-
-      loadQuestion(0);
-    }
-
-    function loadQuestion(index) {
-      const q = quizQuestions[index];
-      const qText = document.getElementById('q-text');
-      const qOptions = document.getElementById('q-options');
-      const qExpl = document.getElementById('q-explanation');
-      const nextBtn = document.getElementById('btn-next-quiz');
-      const progress = document.getElementById('quiz-progress');
-
+      // Update progress fraction
       progress.innerText = `${index + 1}/${quizQuestions.length}`;
       qText.innerText = q.question;
       qOptions.innerHTML = '';
       qExpl.style.display = 'none';
-      nextBtn.style.display = 'none';
+
+      // Highlight active grid item
+      document.querySelectorAll('.grid-item').forEach(el => el.classList.remove('active'));
+      const activeGridBtn = document.getElementById('grid-btn-' + index);
+      if (activeGridBtn) activeGridBtn.classList.add('active');
+
+      // Check if question has already been solved
+      const isSolved = userAnswers[index] !== undefined;
 
       q.options.forEach((opt, idx) => {
         const li = document.createElement('li');
         li.className = 'option-item';
         li.innerText = opt;
-        li.onclick = () => submitAnswer(idx, li);
+
+        if (isSolved) {
+          // Disable clicking options
+          li.onclick = null;
+          // Highlight correct option in green
+          if (idx === q.answerIndex) {
+            li.classList.add('correct');
+          }
+          // Highlight wrong option in red if selected by user
+          if (idx === userAnswers[index] && idx !== q.answerIndex) {
+            li.classList.add('wrong');
+          }
+        } else {
+          // Enable click event
+          li.onclick = () => submitAnswer(idx, li);
+        }
+        
         qOptions.appendChild(li);
       });
+
+      // If solved, show explanation automatically
+      if (isSolved) {
+        qExpl.style.display = 'block';
+        if (userResults[index]) {
+          qExpl.innerHTML = `<strong>🟢 Correct!</strong> ${q.explanation}`;
+        } else {
+          qExpl.innerHTML = `<strong>🔴 Incorrect.</strong> ${q.explanation}`;
+        }
+      }
+
+      // Configure bidirectional navigation buttons
+      prevBtn.disabled = (index === 0);
+      nextBtn.disabled = (index === quizQuestions.length - 1);
     }
 
     function submitAnswer(selectedIndex, optionElement) {
       const q = quizQuestions[currentQuizIndex];
       const qOptions = document.getElementById('q-options');
       const qExpl = document.getElementById('q-explanation');
-      const nextBtn = document.getElementById('btn-next-quiz');
+      const gridBtn = document.getElementById('grid-btn-' + currentQuizIndex);
 
-      // Disable other clicks
+      // Lock other options
       Array.from(qOptions.children).forEach(child => child.onclick = null);
 
+      // Save answer
+      userAnswers[currentQuizIndex] = selectedIndex;
+
       if (selectedIndex === q.answerIndex) {
+        userResults[currentQuizIndex] = true;
         optionElement.classList.add('correct');
         qExpl.innerHTML = `<strong>🟢 Correct!</strong> ${q.explanation}`;
+        if (gridBtn) gridBtn.classList.add('correct');
       } else {
+        userResults[currentQuizIndex] = false;
         optionElement.classList.add('wrong');
         qOptions.children[q.answerIndex].classList.add('correct');
         qExpl.innerHTML = `<strong>🔴 Incorrect.</strong> ${q.explanation}`;
+        if (gridBtn) gridBtn.classList.add('wrong');
       }
 
       qExpl.style.display = 'block';
+      updateScoreSummary();
+    }
 
-      // Show next button if not last question
-      if (currentQuizIndex < quizQuestions.length - 1) {
-        nextBtn.style.display = 'inline-block';
+    function loadPrevQuestion() {
+      if (currentQuizIndex > 0) {
+        loadQuestion(currentQuizIndex - 1);
       }
     }
 
     function loadNextQuestion() {
-      currentQuizIndex++;
-      loadQuestion(currentQuizIndex);
-    }
-
-    // local environment verification API handler
-    function runVerification(toolName) {
-      const statusBadge = document.getElementById('status-' + toolName);
-      const consoleLog = document.getElementById('console-output');
-      
-      statusBadge.innerText = 'verifying...';
-      statusBadge.className = 'status-badge unchecked';
-
-      consoleLog.innerText += `\n$ Run check: verify_${toolName}...`;
-
-      fetch('/api/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tool: toolName })
-      })
-      .then(res => {
-        if (!res.ok) throw new Error("Server not responding");
-        return res.json();
-      })
-      .then(data => {
-        consoleLog.innerText += `\n${data.output}`;
-        consoleLog.scrollTop = consoleLog.scrollHeight; // Scroll down
-
-        if (data.status === 'success') {
-          statusBadge.innerText = 'PASS';
-          statusBadge.className = 'status-badge success';
-        } else {
-          statusBadge.innerText = 'FAIL';
-          statusBadge.className = 'status-badge failed';
-        }
-      })
-      .catch(err => {
-        consoleLog.innerText += `\nError running check: server offline or unreachable. Please launch study_server.py first!`;
-        statusBadge.innerText = 'ERROR';
-        statusBadge.className = 'status-badge failed';
-      });
-    }
-
-    // Glossary Search Engine
-    function filterGlossary() {
-      const query = document.getElementById('search-query').value.toLowerCase().trim();
-      const list = document.getElementById('glossary-list');
-      list.innerHTML = '';
-
-      const filtered = COURSE_DATA.glossary.filter(g => {
-        return g.term.toLowerCase().includes(query) || g.definition.toLowerCase().includes(query);
-      });
-
-      if (filtered.length === 0) {
-        list.innerHTML = '<p class="text-muted">No terms match your search query.</p>';
-        return;
+      if (currentQuizIndex < quizQuestions.length - 1) {
+        loadQuestion(currentQuizIndex + 1);
       }
+    }
 
-      filtered.forEach(g => {
-        const card = document.createElement('div');
-        card.className = 'glossary-card';
-        card.innerHTML = `<h3>${g.term}</h3><p>${g.definition}</p>`;
-        list.appendChild(card);
-      });
+    function redoCurrentQuiz() {
+      if (confirm("Are you sure you want to reset this test? All your current answers for this module will be cleared.")) {
+        initQuizForModule(currentModuleId);
+      }
     }
   </script>
 </body>

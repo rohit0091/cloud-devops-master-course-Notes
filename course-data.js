@@ -1,136 +1,6143 @@
 // Database for Cloud Engineering, Backend, & DevOps Course
 const COURSE_DATA = {
-  modules: [
-    { id: "module-01", title: "Module 1 - Cloud Fundamentals", file: "module-01-cloud-fundamentals.md" },
-    { id: "module-02", title: "Module 2 - Distributed Systems", file: "module-02-distributed-systems.md" },
-    { id: "module-03", title: "Module 3 - AWS Deep Dive", file: "module-03-aws.md" },
-    { id: "module-04", title: "Module 4 - Networking Foundations", file: "module-04-networking.md" },
-    { id: "module-05", title: "Module 5 - Linux System Administration", file: "module-05-linux.md" },
-    { id: "module-06", title: "Module 6 - Docker & Containerization", file: "module-06-docker.md" },
-    { id: "module-07", title: "Module 7 - Kubernetes Orchestration", file: "module-07-kubernetes.md" },
-    { id: "module-08", title: "Module 8 - CI/CD Automation", file: "module-08-cicd.md" },
-    { id: "module-09", title: "Module 9 - Git & Version Control", file: "module-09-git-github.md" },
-    { id: "module-10", title: "Module 10 - Databases (SQL & NoSQL)", file: "module-10-databases.md" },
-    { id: "module-11", title: "Module 11 - Backend Development", file: "module-11-backend-development.md" },
-    { id: "module-12", title: "Module 12 - Cloud Security & Cryptography", file: "module-12-security.md" },
-    { id: "module-13", title: "Module 13 - Monitoring & Observability", file: "module-13-monitoring.md" },
-    { id: "module-14", title: "Module 14 - Load Balancing", file: "module-14-load-balancing.md" },
-    { id: "module-15", title: "Module 15 - Caching Strategies", file: "module-15-caching.md" },
-    { id: "module-16", title: "Module 16 - System Architecture Patterns", file: "module-16-architecture.md" },
-    { id: "module-17", title: "Module 17 - Infrastructure as Code (IaC)", file: "module-17-iac.md" },
-    { id: "module-18", title: "Module 18 - System Design Cases", file: "module-18-system-design.md" },
-    { id: "module-19", title: "Module 19 - HR & Behavioral Preparation", file: "module-19-behavioral.md" },
-    { id: "module-20", title: "Module 20 - Data Structures & Coding", file: "module-20-coding-interviews.md" },
-    { id: "final-resources", title: "Master Prep & Study Resources", file: "final-section-study-resources.md" }
-  ],
-  mcqs: [
+  "modules": [
     {
-      module: "module-01",
-      question: "Which cloud service model requires the customer to perform operating system patching?",
-      options: ["SaaS (Software as a Service)", "PaaS (Platform as a Service)", "IaaS (Infrastructure as a Service)", "Serverless"],
-      answerIndex: 2,
-      explanation: "Under Infrastructure as a Service (IaaS), the cloud provider manages hardware and virtualization layers, while the customer is responsible for the guest OS, including security patching and software installations."
+      "id": "module-01",
+      "title": "Module 1 - Cloud Fundamentals",
+      "file": "module-01-cloud-fundamentals.md"
     },
     {
-      module: "module-01",
-      question: "What is an Availability Zone (AZ) in cloud computing?",
-      options: ["A geographic region across different countries", "One or more discrete, isolated data centers within a region", "A content delivery network node for caching static files", "A secure virtual firewall protecting network interfaces"],
-      answerIndex: 1,
-      explanation: "An Availability Zone (AZ) consists of one or more discrete, physical data centers running on independent power, cooling, and network grids in an AWS region."
+      "id": "module-02",
+      "title": "Module 2 - Distributed Systems",
+      "file": "module-02-distributed-systems.md"
     },
     {
-      module: "module-02",
-      question: "In the CAP Theorem, what trade-off must be made during a network partition?",
-      options: ["Performance vs Latency", "Consistency vs Availability", "Durability vs Scalability", "Isolation vs Atomicity"],
-      answerIndex: 1,
-      explanation: "The CAP Theorem states that during a network partition (P), a distributed system must choose between maintaining strict data Consistency (C) or serving client requests immediately with Availability (A)."
+      "id": "module-03",
+      "title": "Module 3 - AWS Deep Dive",
+      "file": "module-03-aws.md"
     },
     {
-      module: "module-02",
-      question: "Which database consistency model is represented by NoSQL systems that synchronize data in the background?",
-      options: ["Strong Consistency", "Immediate Consistency", "Eventual Consistency", "Serializability"],
-      answerIndex: 2,
-      explanation: "Eventual consistency (part of the BASE model) guarantees that database replica nodes will synchronize and become consistent over time if no new updates are written to the records."
+      "id": "module-04",
+      "title": "Module 4 - Networking Foundations",
+      "file": "module-04-networking.md"
     },
     {
-      module: "module-03",
-      question: "Which AWS service is a managed, highly scalable object storage service?",
-      options: ["Amazon EBS", "Amazon EFS", "Amazon S3", "Amazon RDS"],
-      answerIndex: 2,
-      explanation: "Amazon S3 (Simple Storage Service) is an object storage service designed for storing and retrieving any amount of data (like files, media, backups) from anywhere on the web."
+      "id": "module-05",
+      "title": "Module 5 - Linux System Administration",
+      "file": "module-05-linux.md"
     },
     {
-      module: "module-03",
-      question: "How do security groups differ from Network ACLs (NACLs) in AWS?",
-      options: ["Security groups are stateless; NACLs are stateful", "Security groups operate at the subnet level; NACLs operate at the instance level", "Security groups are stateful; NACLs are stateless and operate at the subnet level", "Security groups support block rules; NACLs only support allow rules"],
-      answerIndex: 2,
-      explanation: "Security Groups are stateful (inbound rules automatically allow outbound responses) and apply at the instance level. Network ACLs are stateless (must define rules in both directions) and apply at the subnet boundary."
+      "id": "module-06",
+      "title": "Module 6 - Docker & Containerization",
+      "file": "module-06-docker.md"
     },
     {
-      module: "module-04",
-      question: "At which layer of the OSI model does a standard Router operate?",
-      options: ["Layer 2: Data Link", "Layer 3: Network", "Layer 4: Transport", "Layer 7: Application"],
-      answerIndex: 1,
-      explanation: "Routers operate at Layer 3 (Network Layer) of the OSI model because they read IP address headers to route packets across different subnets and networks."
+      "id": "module-07",
+      "title": "Module 7 - Kubernetes Orchestration",
+      "file": "module-07-kubernetes.md"
     },
     {
-      module: "module-04",
-      question: "Which DNS record type is used to map a domain alias name to another canonical domain name?",
-      options: ["A Record", "CNAME Record", "MX Record", "TXT Record"],
-      answerIndex: 1,
-      explanation: "A CNAME (Canonical Name) record maps a domain name or subdomain (e.g. www.app.com) to another domain name (e.g. app.cloudfront.net) as an alias."
+      "id": "module-08",
+      "title": "Module 8 - CI/CD Automation",
+      "file": "module-08-cicd.md"
     },
     {
-      module: "module-05",
-      question: "What does the command 'chmod 600 key.pem' accomplish in Linux?",
-      options: ["Grants read and write access only to the file owner", "Grants full read, write, and execute permissions to all users", "Makes the file read-only for group members", "Deletes the owner assignment of the file"],
-      answerIndex: 0,
-      explanation: "A permission octal of 600 represents Owner: Read+Write (4+2=6), Group: None (0), and Others: None (0). This is the required permission format for private SSH key files."
+      "id": "module-09",
+      "title": "Module 9 - Git & Version Control",
+      "file": "module-09-git-github.md"
     },
     {
-      module: "module-06",
-      question: "What is the key difference between a Docker Volume and a Bind Mount?",
-      options: ["Bind mounts are managed by Docker; Volumes map any host path", "Volumes are managed by Docker; Bind mounts map any arbitrary host directory", "Volumes write to RAM; Bind mounts write to physical disks", "Bind mounts survive container deletions; Volumes do not"],
-      answerIndex: 1,
-      explanation: "Volumes are created and managed by the Docker daemon inside its protected storage directories. Bind Mounts map any user-defined folder path on the host filesystem directly into the container."
+      "id": "module-10",
+      "title": "Module 10 - Databases (SQL & NoSQL)",
+      "file": "module-10-databases.md"
     },
     {
-      module: "module-07",
-      question: "Which Kubernetes resource is the smallest deployable unit of execution?",
-      options: ["Container", "Pod", "Deployment", "ReplicaSet"],
-      answerIndex: 1,
-      explanation: "A Pod is the smallest deployable unit of computing in Kubernetes, encapsulating one or more containers that share network, storage, and configurations."
+      "id": "module-11",
+      "title": "Module 11 - Backend Development",
+      "file": "module-11-backend-development.md"
     },
     {
-      module: "module-08",
-      question: "Which deployment strategy involves maintaining two identical hosting groups to switch traffic instantly with zero downtime?",
-      options: ["Canary Deployment", "Rolling Update", "Blue-Green Deployment", "Recreate Deployment"],
-      answerIndex: 2,
-      explanation: "Blue-Green deployment provisions two identical environments (Active Blue and Standby Green). Traffic is instantly swapped via router configs, enabling zero downtime and fast rollback."
+      "id": "module-12",
+      "title": "Module 12 - Cloud Security & Cryptography",
+      "file": "module-12-security.md"
     },
     {
-      module: "module-09",
-      question: "What is the result of running 'git fetch' compared to 'git pull'?",
-      options: ["Fetch downloads metadata but does not merge changes; Pull downloads and merges immediately", "Fetch deletes local changes; Pull commits them", "Fetch uploads commits; Pull downloads them", "They are identical commands"],
-      answerIndex: 0,
-      explanation: "'git fetch' queries the remote repository to download commit histories and branch pointers without altering your local working copy files. 'git pull' runs fetch followed immediately by a git merge."
+      "id": "module-13",
+      "title": "Module 13 - Monitoring & Observability",
+      "file": "module-13-monitoring.md"
     },
     {
-      module: "module-10",
-      question: "What type of index determines the physical storage ordering of data rows inside a SQL table?",
-      options: ["Non-Clustered Index", "Clustered Index", "Composite Index", "Secondary Index"],
-      answerIndex: 1,
-      explanation: "A Clustered Index dictates the physical ordering of data pages on disk based on the key value (usually the Primary Key). Only one clustered index can exist per table."
+      "id": "module-14",
+      "title": "Module 14 - Load Balancing",
+      "file": "module-14-load-balancing.md"
+    },
+    {
+      "id": "module-15",
+      "title": "Module 15 - Caching Strategies",
+      "file": "module-15-caching.md"
+    },
+    {
+      "id": "module-16",
+      "title": "Module 16 - System Architecture Patterns",
+      "file": "module-16-architecture.md"
+    },
+    {
+      "id": "module-17",
+      "title": "Module 17 - Infrastructure as Code (IaC)",
+      "file": "module-17-iac.md"
+    },
+    {
+      "id": "module-18",
+      "title": "Module 18 - System Design Cases",
+      "file": "module-18-system-design.md"
+    },
+    {
+      "id": "module-19",
+      "title": "Module 19 - HR & Behavioral Preparation",
+      "file": "module-19-behavioral.md"
+    },
+    {
+      "id": "module-20",
+      "title": "Module 20 - Data Structures & Coding",
+      "file": "module-20-coding-interviews.md"
+    },
+    {
+      "id": "final-resources",
+      "title": "Master Prep & Study Resources",
+      "file": "final-section-study-resources.md"
     }
   ],
-  glossary: [
-    { term: "Hypervisor", definition: "Software or firmware that creates and runs virtual machines by partitioning physical host resources." },
-    { term: "Statelessness", definition: "A design constraint where a server does not store client session states locally, requiring every request to contain all details needed to process it." },
-    { term: "CIDR", definition: "Classless Inter-Domain Routing, a standardized method for allocating IP addresses and routing IP packets." },
-    { term: "Idempotency", definition: "The property of certain operations where running them multiple times yields the identical result as running them once (e.g. HTTP GET, PUT, DELETE)." },
-    { term: "TTL", definition: "Time to Live, a value defining the duration for which a data packet or DNS record should be cached before expiring." },
-    { term: "Zero Trust", definition: "A cybersecurity framework built on the premise to 'never trust, always verify', requiring authentication at every network transaction boundary." },
-    { term: "Orchestration", definition: "The automated coordination and management of complex computer systems, middleware, and container services." }
+  "mcqs": [
+    {
+      "module": "module-01",
+      "question": "What is the primary benefit of virtualization in cloud computing?",
+      "options": [
+        "Allows physical hardware to run multiple OS instances",
+        "Increases speed of internet routing",
+        "Replaces physical data centers entirely",
+        "Guarantees 100% security encryption"
+      ],
+      "answerIndex": 0,
+      "explanation": "Virtualization splits a single physical server into multiple isolated virtual systems using a hypervisor, maximizing physical hardware utilization."
+    },
+    {
+      "module": "module-01",
+      "question": "Which cloud service model maps to renting raw virtual machines?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "Serverless"
+      ],
+      "answerIndex": 2,
+      "explanation": "IaaS (Infrastructure as a Service) provides access to fundamental compute, storage, and networking resources."
+    },
+    {
+      "module": "module-01",
+      "question": "What is a characteristic of Public Cloud?",
+      "options": [
+        "Hardware is owned and operated by a single business",
+        "Infrastructure is shared securely among multiple organizations",
+        "Does not require internet access",
+        "Is always cheaper than private cloud"
+      ],
+      "answerIndex": 1,
+      "explanation": "Public cloud resources are owned by third-party providers (like AWS) and shared among multiple organizations (tenants)."
+    },
+    {
+      "module": "module-01",
+      "question": "Which deployment model combines public and private cloud environments?",
+      "options": [
+        "Community Cloud",
+        "Hybrid Cloud",
+        "Multi-Tenant Cloud",
+        "Local Cloud"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hybrid cloud mixes on-premises private cloud infrastructure with public cloud services."
+    },
+    {
+      "module": "module-01",
+      "question": "What is horizontal scaling (scaling out)?",
+      "options": [
+        "Adding more CPU to a server",
+        "Adding more physical servers to a system",
+        "Migrating database schemas",
+        "Setting up a proxy connection"
+      ],
+      "answerIndex": 1,
+      "explanation": "Horizontal scaling involves adding more nodes (servers) to share the load, rather than upgrading a single server."
+    },
+    {
+      "module": "module-01",
+      "question": "What is vertical scaling (scaling up)?",
+      "options": [
+        "Adding more servers",
+        "Adding more RAM/CPU to an existing server",
+        "Creating an AWS VPC",
+        "Configuring DNS caching"
+      ],
+      "answerIndex": 1,
+      "explanation": "Vertical scaling increases the capacity of an existing machine by adding more CPU, RAM, or storage."
+    },
+    {
+      "module": "module-01",
+      "question": "What does Elasticity refer to in cloud computing?",
+      "options": [
+        "The strength of fiber optic cables",
+        "Scaling resources dynamically to match real-time demand",
+        "The security of IAM keys",
+        "Static routing configurations"
+      ],
+      "answerIndex": 1,
+      "explanation": "Elasticity is the automated capability to scale resources up and down rapidly in response to active traffic load changes."
+    },
+    {
+      "module": "module-01",
+      "question": "Which concept describes a system remaining online despite a critical component failure?",
+      "options": [
+        "Scalability",
+        "High Availability",
+        "Fault Tolerance",
+        "Disaster Recovery"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fault tolerance means a system can continue operating normally even when one of its hardware components fails completely."
+    },
+    {
+      "module": "module-01",
+      "question": "What is the Shared Responsibility Model?",
+      "options": [
+        "Splitting cloud costs among departments",
+        "Boundary dividing security tasks between provider and customer",
+        "Sharing database replication logs",
+        "Standardizing coding styles"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Shared Responsibility Model states that the cloud provider manages security OF the cloud (hardware, virtualization), while the customer manages security IN the cloud (data, OS, code)."
+    },
+    {
+      "module": "module-01",
+      "question": "Which cloud infrastructure element is used to cache content near users?",
+      "options": [
+        "Availability Zones",
+        "Edge Locations",
+        "Subnets",
+        "Route Tables"
+      ],
+      "answerIndex": 1,
+      "explanation": "Edge Locations are global caching nodes used by CDN services (like CloudFront) to reduce network latency for end-users."
+    },
+    {
+      "module": "module-01",
+      "question": "What does Multi-Tenancy mean?",
+      "options": [
+        "Having multiple cloud providers",
+        "Sharing physical hardware among multiple customers securely",
+        "Running multiple databases inside a single VM",
+        "Using multiple domain names"
+      ],
+      "answerIndex": 1,
+      "explanation": "Multi-tenancy is an architecture where multiple customer environments run on the same physical server, separated logically by virtualization."
+    },
+    {
+      "module": "module-01",
+      "question": "What is pay-as-you-go pricing?",
+      "options": [
+        "Flat annual licensing fees",
+        "Billing based on resources actively consumed",
+        "Prepaying for servers before usage",
+        "Paying for data bandwidth only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pay-as-you-go bills customers for the exact duration and quantity of cloud resources consumed."
+    },
+    {
+      "module": "module-01",
+      "question": "What does High Availability mean?",
+      "options": [
+        "Fast network routing speeds",
+        "Designing redundancy so a system remains accessible with minimal downtime",
+        "Running code on high-CPU instances",
+        "Exposing endpoints to the public"
+      ],
+      "answerIndex": 1,
+      "explanation": "High Availability (HA) refers to systems designed to ensure operational uptime for as close to 100% of the time as possible."
+    },
+    {
+      "module": "module-01",
+      "question": "Which virtualization component manages VM resource allocations?",
+      "options": [
+        "Container Engine",
+        "Hypervisor",
+        "Process Daemon",
+        "Systemd"
+      ],
+      "answerIndex": 1,
+      "explanation": "A hypervisor (or Virtual Machine Monitor) is software that manages and runs virtual machines on a host physical computer."
+    },
+    {
+      "module": "module-01",
+      "question": "What is a Type-1 Hypervisor?",
+      "options": [
+        "Runs on top of a host OS",
+        "Runs directly on physical bare-metal hardware",
+        "Is managed via browser console only",
+        "Runs inside containers only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Type-1 (bare-metal) hypervisors install directly onto the physical server hardware without requiring an underlying host OS."
+    },
+    {
+      "module": "module-01",
+      "question": "What is a Type-2 Hypervisor?",
+      "options": [
+        "Installs directly on bare-metal",
+        "Runs on top of an existing host Operating System",
+        "Is faster than Type-1",
+        "Does not support virtual machines"
+      ],
+      "answerIndex": 1,
+      "explanation": "Type-2 hypervisors run inside the host operating system like standard desktop software applications (e.g. VirtualBox)."
+    },
+    {
+      "module": "module-01",
+      "question": "What is the main limitation of Virtual Machines compared to Containers?",
+      "options": [
+        "VMs are less secure",
+        "VMs carry heavy resource footprints because they boot a full guest OS",
+        "VMs cannot run databases",
+        "VMs do not support networking"
+      ],
+      "answerIndex": 1,
+      "explanation": "Every VM packages a full guest operating system, making them heavier to boot and store than containers which share the host kernel."
+    },
+    {
+      "module": "module-01",
+      "question": "Which is a characteristic of Cloud Native applications?",
+      "options": [
+        "Designed to run only on-premises",
+        "Built as loosely coupled microservices in containers",
+        "Always written in Python",
+        "Highly dependent on static hardware IPs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cloud-native applications are designed to leverage cloud scalability, utilizing containers, microservices, and dynamic orchestration."
+    },
+    {
+      "module": "module-01",
+      "question": "What is Disaster Recovery (DR)?",
+      "options": [
+        "Restoring system operations after a catastrophic event",
+        "Adding RAM to a database",
+        "Running unit tests in a pipeline",
+        "Encrypting backup folders"
+      ],
+      "answerIndex": 0,
+      "explanation": "Disaster Recovery involves the strategies and procedures to recover data and restore application availability after a natural or technical disaster."
+    },
+    {
+      "module": "module-01",
+      "question": "Which model maps to SaaS?",
+      "options": [
+        "Renting an EC2 server",
+        "Uploading code to Beanstalk",
+        "Logging into Google Docs in a browser",
+        "Writing a Lambda function"
+      ],
+      "answerIndex": 2,
+      "explanation": "SaaS (Software as a Service) delivers a fully functional software application accessible directly by end-users."
+    },
+    {
+      "module": "module-01",
+      "question": "Which model maps to PaaS?",
+      "options": [
+        "Renting a physical storage server",
+        "Uploading a zip containing Node.js code to Heroku",
+        "Using Gmail",
+        "Setting up a private subnet route table"
+      ],
+      "answerIndex": 1,
+      "explanation": "PaaS (Platform as a Service) provides a managed runtime environment where developers deploy code without dealing with OS admin."
+    },
+    {
+      "module": "module-01",
+      "question": "In the Shared Responsibility model, who patches the Guest OS in a basic EC2 server?",
+      "options": [
+        "AWS",
+        "The Customer",
+        "Third-party audit team",
+        "OS vendor automatically"
+      ],
+      "answerIndex": 1,
+      "explanation": "Since EC2 is IaaS, the customer holds full administrative access and is responsible for patching and upgrading the Guest OS."
+    },
+    {
+      "module": "module-01",
+      "question": "What is a region in cloud computing?",
+      "options": [
+        "A physical server rack",
+        "A cluster of content delivery networks",
+        "A geographic location hosting isolated availability zones",
+        "A secure network protocol"
+      ],
+      "answerIndex": 2,
+      "explanation": "A region is a distinct geographic area containing multiple isolated availability zones connected by low-latency networks."
+    },
+    {
+      "module": "module-01",
+      "question": "What does RTO stand for in Disaster Recovery?",
+      "options": [
+        "Resource Timing Objective",
+        "Recovery Time Objective",
+        "Restore Transition Operation",
+        "Root Tenant Ownership"
+      ],
+      "answerIndex": 1,
+      "explanation": "Recovery Time Objective (RTO) is the maximum acceptable duration of time that an application can remain offline after a disaster."
+    },
+    {
+      "module": "module-01",
+      "question": "What does RPO stand for in Disaster Recovery?",
+      "options": [
+        "Recovery Point Objective",
+        "Resource Partition Owner",
+        "Restore Performance Operation",
+        "Registry Port Organization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Recovery Point Objective (RPO) defines the maximum age of data that must be recovered from backup storage for resume operations."
+    },
+    {
+      "module": "module-02",
+      "question": "Which model guarantees database transactional ACID properties?",
+      "options": [
+        "SQL RDBMS",
+        "NoSQL Document Store",
+        "Eventual Consistent Cache",
+        "Distributed Queue"
+      ],
+      "answerIndex": 0,
+      "explanation": "Relational database management systems (RDBMS) utilize locks and write-ahead logs to enforce ACID transactions."
+    },
+    {
+      "module": "module-02",
+      "question": "What does the 'A' in ACID stand for?",
+      "options": [
+        "Availability",
+        "Atomicity",
+        "Aggregation",
+        "Authority"
+      ],
+      "answerIndex": 1,
+      "explanation": "Atomicity guarantees that all statements inside a database transaction succeed or fail as a single unit."
+    },
+    {
+      "module": "module-02",
+      "question": "What does the 'I' in ACID stand for?",
+      "options": [
+        "Integration",
+        "Isolation",
+        "Index",
+        "Idempotency"
+      ],
+      "answerIndex": 1,
+      "explanation": "Isolation ensures that concurrently running transactions do not interfere with or read uncommitted data from each other."
+    },
+    {
+      "module": "module-02",
+      "question": "Which distributed model is optimized for massive horizontal scaling at the cost of strict consistency?",
+      "options": [
+        "ACID",
+        "BASE",
+        "RAFT",
+        "Paxos"
+      ],
+      "answerIndex": 1,
+      "explanation": "The BASE model (Basic Availability, Soft State, Eventual Consistency) favors horizontal scaling and low latency over immediate consistency."
+    },
+    {
+      "module": "module-02",
+      "question": "What is database sharding?",
+      "options": [
+        "Creating backup replica copies of tables",
+        "Splitting database tables horizontally across different servers",
+        "Moving old records to cold storage",
+        "Adding indices to speed up searches"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sharding partitions data rows horizontally based on a shard key, distributing records across different hardware nodes."
+    },
+    {
+      "module": "module-02",
+      "question": "What is Leader-Follower replication?",
+      "options": [
+        "Writing data to all database nodes simultaneously",
+        "Writes go to a primary master node, which syncs them to read-only follower nodes",
+        "Allowing any server to execute transactions at any time",
+        "Sharding tables based on alphabetical indexes"
+      ],
+      "answerIndex": 1,
+      "explanation": "Leader-Follower (Master-Slave) replication directs write traffic to a single primary database while replicas sync changes to serve reads."
+    },
+    {
+      "module": "module-02",
+      "question": "Which distributed consensus algorithm is designed to be easy to understand and implement?",
+      "options": [
+        "Paxos",
+        "Raft",
+        "2-Phase Commit",
+        "Gossip Protocol"
+      ],
+      "answerIndex": 1,
+      "explanation": "Raft is a consensus algorithm designed as an alternative to Paxos, managing replicated state logs via leader election."
+    },
+    {
+      "module": "module-02",
+      "question": "What problem does the Saga Pattern solve?",
+      "options": [
+        "Replicating file storage across regions",
+        "Managing distributed transactions across multiple microservice databases",
+        "Configuring load balancer sticky sessions",
+        "Managing docker container logs"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Saga Pattern manages data consistency across microservices by running a chain of local transactions and compensating rollbacks on failures."
+    },
+    {
+      "module": "module-02",
+      "question": "What is a network partition in distributed systems?",
+      "options": [
+        "A firewall blocking port 80 traffic",
+        "A communication break causing nodes to split into isolated groups",
+        "Setting up local subnets",
+        "A hardware failure of a single node CPU"
+      ],
+      "answerIndex": 1,
+      "explanation": "A network partition is a communication failure where nodes in a cluster split into isolated groups, unable to send messages to each other."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-02",
+      "question": "[Distributed Systems Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Distributed Systems module."
+    },
+    {
+      "module": "module-03",
+      "question": "Which AWS service is a serverless compute service executing code in response to events?",
+      "options": [
+        "Amazon EC2",
+        "AWS Lambda",
+        "Amazon ECS",
+        "AWS Elastic Beanstalk"
+      ],
+      "answerIndex": 1,
+      "explanation": "AWS Lambda executes code only when triggered by events (like S3 uploads or API calls), charging only for execution duration."
+    },
+    {
+      "module": "module-03",
+      "question": "What is the primary storage type used as virtual hard disks for AWS EC2 instances?",
+      "options": [
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EFS",
+        "AWS KMS"
+      ],
+      "answerIndex": 1,
+      "explanation": "Amazon EBS (Elastic Block Store) provides block-level storage volumes used as persistent storage disks for EC2 VMs."
+    },
+    {
+      "module": "module-03",
+      "question": "Which AWS service provides managed relational databases supporting MySQL and PostgreSQL?",
+      "options": [
+        "Amazon DynamoDB",
+        "Amazon RDS",
+        "Amazon Aurora",
+        "Amazon S3"
+      ],
+      "answerIndex": 1,
+      "explanation": "Amazon RDS (Relational Database Service) makes it easy to set up, operate, and scale relational databases in the cloud."
+    },
+    {
+      "module": "module-03",
+      "question": "What is the purpose of an AWS NAT Gateway?",
+      "options": [
+        "Allows public internet to reach private servers directly",
+        "Provides static routing between VPCs",
+        "Enables private subnet resources to connect outbound to the internet securely",
+        "Decrypts SSL/TLS traffic blocks"
+      ],
+      "answerIndex": 2,
+      "explanation": "A NAT Gateway allows instances in private subnets to send outbound traffic to the internet while preventing external hosts from initiating direct inbound connections."
+    },
+    {
+      "module": "module-03",
+      "question": "Which service acts as a global Content Delivery Network (CDN) in AWS?",
+      "options": [
+        "Amazon Route53",
+        "Amazon CloudFront",
+        "AWS Shield",
+        "AWS WAF"
+      ],
+      "answerIndex": 1,
+      "explanation": "Amazon CloudFront is a fast CDN service that securely delivers data, videos, applications, and APIs to users globally with low latency using Edge Locations."
+    },
+    {
+      "module": "module-03",
+      "question": "Which service is used to manage identities, users, groups, and permissions in AWS?",
+      "options": [
+        "AWS Secrets Manager",
+        "AWS KMS",
+        "AWS IAM",
+        "AWS Shield"
+      ],
+      "answerIndex": 2,
+      "explanation": "AWS IAM (Identity and Access Management) enables you to securely control access to AWS services and resources for users and roles."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-03",
+      "question": "[AWS Deep Dive Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the AWS Deep Dive module."
+    },
+    {
+      "module": "module-04",
+      "question": "How many layers are defined in the theoretical OSI networking model?",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "8"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Open Systems Interconnection (OSI) model defines 7 distinct networking layers, from Physical (Layer 1) to Application (Layer 7)."
+    },
+    {
+      "module": "module-04",
+      "question": "Which protocol operates at the Transport Layer (Layer 4) of the OSI model and guarantees packet delivery?",
+      "options": [
+        "UDP",
+        "IP",
+        "TCP",
+        "HTTP"
+      ],
+      "answerIndex": 2,
+      "explanation": "TCP (Transmission Control Protocol) is connection-oriented and guarantees reliable, ordered delivery of data packets."
+    },
+    {
+      "module": "module-04",
+      "question": "What is CIDR block notation used for?",
+      "options": [
+        "Encrypting password data",
+        "Representing IP address ranges and network masks",
+        "Formatting JSON payloads",
+        "Generating SSH key pairs"
+      ],
+      "answerIndex": 1,
+      "explanation": "CIDR (Classless Inter-Domain Routing) represents IP ranges (e.g. 10.0.0.0/16) indicating how many address bits are reserved for the network."
+    },
+    {
+      "module": "module-04",
+      "question": "Which port is standard for encrypted web traffic (HTTPS)?",
+      "options": [
+        "80",
+        "22",
+        "443",
+        "8080"
+      ],
+      "answerIndex": 2,
+      "explanation": "Port 443 is the default port used for secure web traffic running HTTP over TLS/SSL (HTTPS)."
+    },
+    {
+      "module": "module-04",
+      "question": "What does DNS stand for?",
+      "options": [
+        "Domain Name System",
+        "Dynamic Network Service",
+        "Direct Node Server",
+        "Data Network Storage"
+      ],
+      "answerIndex": 0,
+      "explanation": "DNS (Domain Name System) resolves human-readable domain names (like google.com) into computer-readable IP addresses."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-04",
+      "question": "[Networking Foundations Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Networking Foundations module."
+    },
+    {
+      "module": "module-05",
+      "question": "Which Linux command is used to display the current working directory path?",
+      "options": [
+        "ls",
+        "cd",
+        "pwd",
+        "mkdir"
+      ],
+      "answerIndex": 2,
+      "explanation": "`pwd` (print working directory) outputs the absolute path of the directory you are currently in."
+    },
+    {
+      "module": "module-05",
+      "question": "What Linux command searches for text patterns inside files using regular expressions?",
+      "options": [
+        "find",
+        "grep",
+        "awk",
+        "sed"
+      ],
+      "answerIndex": 1,
+      "explanation": "`grep` (global regular expression print) searches files for lines matching a target pattern and outputs them."
+    },
+    {
+      "module": "module-05",
+      "question": "What is the numeric octal representation for full permissions (read, write, execute) in Linux?",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Read (4) + Write (2) + Execute (1) = 7. Full permissions for a category (User, Group, or Others) is represented by 7."
+    },
+    {
+      "module": "module-05",
+      "question": "Which signal code is sent by the command 'kill -9' to force-terminate a process?",
+      "options": [
+        "SIGTERM",
+        "SIGINT",
+        "SIGKILL",
+        "SIGHUP"
+      ],
+      "answerIndex": 2,
+      "explanation": "`kill -9` sends the SIGKILL signal, which forces the kernel to terminate the target process immediately without cleanup."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-05",
+      "question": "[Linux System Administration Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Linux System Administration module."
+    },
+    {
+      "module": "module-06",
+      "question": "Which Dockerfile instruction specifies the base image template to start building from?",
+      "options": [
+        "RUN",
+        "COPY",
+        "FROM",
+        "CMD"
+      ],
+      "answerIndex": 2,
+      "explanation": "The `FROM` instruction initializes a new build stage and sets the Base Image for subsequent instructions."
+    },
+    {
+      "module": "module-06",
+      "question": "What is the primary difference between the RUN and CMD instructions in a Dockerfile?",
+      "options": [
+        "RUN executes at container start; CMD executes during image build",
+        "RUN executes during image build; CMD defines the default start command for the running container",
+        "RUN is only for copying files; CMD executes shell scripts",
+        "There is no difference"
+      ],
+      "answerIndex": 1,
+      "explanation": "`RUN` executes commands and commits the result as a new image layer during the build process. `CMD` sets the default execution command when the container starts."
+    },
+    {
+      "module": "module-06",
+      "question": "What is the purpose of the `.dockerignore` file?",
+      "options": [
+        "Specifies container ports to block",
+        "Tells Docker CLI to ignore specific local files and folders during build context transfers",
+        "Lists packages to uninstall from the image",
+        "Configures private registry logins"
+      ],
+      "answerIndex": 1,
+      "explanation": "`.dockerignore` prevents large or sensitive local files (like node_modules or credentials) from being sent to the Docker daemon during builds."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-06",
+      "question": "[Docker & Containerization Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Docker & Containerization module."
+    },
+    {
+      "module": "module-07",
+      "question": "Which Kubernetes controller manages ReplicaSets and handles rolling updates of applications?",
+      "options": [
+        "Pod",
+        "Service",
+        "Deployment",
+        "Ingress"
+      ],
+      "answerIndex": 2,
+      "explanation": "A Deployment controller manages ReplicaSets to perform declarative, zero-downtime updates to Pod configurations."
+    },
+    {
+      "module": "module-07",
+      "question": "Which Kubernetes Service type makes the application reachable only from within the cluster?",
+      "options": [
+        "NodePort",
+        "ClusterIP",
+        "LoadBalancer",
+        "ExternalName"
+      ],
+      "answerIndex": 1,
+      "explanation": "`ClusterIP` is the default service type. It exposes the service on an internal IP within the cluster, making it unreachable externally."
+    },
+    {
+      "module": "module-07",
+      "question": "What is the role of a PersistentVolumeClaim (PVC) in Kubernetes?",
+      "options": [
+        "Declares CPU and RAM demands of a container",
+        "Requests physical storage capacity from a PersistentVolume (PV)",
+        "Configures environment variables",
+        "Manages ingress SSL routing"
+      ],
+      "answerIndex": 1,
+      "explanation": "A PVC is a user request for storage. It specifies size and access modes, binding to an available PersistentVolume (PV) resource."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-07",
+      "question": "[Kubernetes Orchestration Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Kubernetes Orchestration module."
+    },
+    {
+      "module": "module-08",
+      "question": "What is the primary goal of Continuous Integration (CI)?",
+      "options": [
+        "Deploying code directly to client databases",
+        "Automating compilation, testing, and merging of code changes into a shared repo",
+        "Writing software documentation automatically",
+        "Encrypting Git repository branches"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous Integration focuses on merging developer code changes frequently, running automated build and test suites to catch bugs early."
+    },
+    {
+      "module": "module-08",
+      "question": "Which deployment strategy routes traffic to a small fraction of users first to verify stability?",
+      "options": [
+        "Blue-Green",
+        "Canary",
+        "Rolling Update",
+        "Recreate"
+      ],
+      "answerIndex": 1,
+      "explanation": "A Canary deployment routes a small slice of live traffic (e.g. 5%) to the new build to analyze error rates and performance before full rollout."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-08",
+      "question": "[CI/CD Automation Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the CI/CD Automation module."
+    },
+    {
+      "module": "module-09",
+      "question": "Which Git command saves uncommitted modifications temporarily so you can switch branches?",
+      "options": [
+        "git checkout",
+        "git stash",
+        "git reset",
+        "git revert"
+      ],
+      "answerIndex": 1,
+      "explanation": "`git stash` temporarily shelves (saves) changes made to your working directory so you can work on other branches without committing unfinished work."
+    },
+    {
+      "module": "module-09",
+      "question": "What is the difference between git reset and git revert?",
+      "options": [
+        "Reset creates a new commit; Revert deletes history",
+        "Reset rewrites commit history by moving pointers; Revert creates a new commit that undoes changes safely",
+        "They are identical commands",
+        "Reset is only for local files; Revert is for remote repositories"
+      ],
+      "answerIndex": 1,
+      "explanation": "`git reset` moves branch pointers backward to discard commits. `git revert` leaves the history intact and creates a new commit applying the inverse changes."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-09",
+      "question": "[Git & Version Control Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Git & Version Control module."
+    },
+    {
+      "module": "module-10",
+      "question": "Which normalization form removes transitive dependencies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "answerIndex": 2,
+      "explanation": "Third Normal Form (3NF) requires meeting 2NF conditions and ensuring that no non-prime attribute transitively depends on any superkey."
+    },
+    {
+      "module": "module-10",
+      "question": "What is a major trade-off of database indexing?",
+      "options": [
+        "Slower reads, faster writes",
+        "Faster reads, slower write operations due to index update overhead",
+        "Requires converting SQL to NoSQL",
+        "Limits the number of table columns"
+      ],
+      "answerIndex": 1,
+      "explanation": "While indexes speed up SELECT queries, they slow down INSERT, UPDATE, and DELETE operations because the index trees must be recalculated."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-10",
+      "question": "[Databases (SQL & NoSQL) Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Databases (SQL & NoSQL) module."
+    },
+    {
+      "module": "module-11",
+      "question": "What HTTP response status code range represents Client Errors?",
+      "options": [
+        "2xx",
+        "3xx",
+        "4xx",
+        "5xx"
+      ],
+      "answerIndex": 2,
+      "explanation": "The 4xx status code range represents client errors (e.g., 400 Bad Request, 401 Unauthorized, 404 Not Found)."
+    },
+    {
+      "module": "module-11",
+      "question": "Which authorization model is stateless and self-contained?",
+      "options": [
+        "Session/Cookie Auth",
+        "JWT (JSON Web Token)",
+        "Basic Authentication",
+        "OAuth 1.0"
+      ],
+      "answerIndex": 1,
+      "explanation": "JWT is stateless because the token payload contains user context and a cryptographic signature, letting the server verify it without querying a session database."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-11",
+      "question": "[Backend Development Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Backend Development module."
+    },
+    {
+      "module": "module-12",
+      "question": "What does the process of Salting add to password hashing?",
+      "options": [
+        "Encryption keys",
+        "A random string of characters appended before hashing",
+        "A speed accelerator",
+        "Compression formatting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Salting appends a unique random string to each password before hashing, ensuring identical passwords yield completely distinct hash values, defeating rainbow tables."
+    },
+    {
+      "module": "module-12",
+      "question": "Which security principle states that accounts should only have the access necessary to perform their roles?",
+      "options": [
+        "Defense in Depth",
+        "Principle of Least Privilege",
+        "Zero Trust Access",
+        "Role-Based Encryption"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Principle of Least Privilege restricts users and processes to the minimum access permissions needed to perform their tasks."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-12",
+      "question": "[Cloud Security & Cryptography Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Cloud Security & Cryptography module."
+    },
+    {
+      "module": "module-13",
+      "question": "What are the three pillars of observability?",
+      "options": [
+        "DNS, HTTP, TLS",
+        "CPU, RAM, Disk",
+        "Logs, Metrics, Traces",
+        "Deploy, Verify, Monitor"
+      ],
+      "answerIndex": 2,
+      "explanation": "Observability is built upon three pillars: Logs (discrete events), Metrics (numeric aggregate performance over time), and Traces (request path latency mappings)."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-13",
+      "question": "[Monitoring & Observability Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Monitoring & Observability module."
+    },
+    {
+      "module": "module-14",
+      "question": "At which layer of the OSI model does an Application Load Balancer (ALB) operate?",
+      "options": [
+        "Layer 3",
+        "Layer 4",
+        "Layer 7",
+        "Layer 6"
+      ],
+      "answerIndex": 2,
+      "explanation": "ALBs operate at Layer 7 (Application Layer) because they route traffic by inspecting HTTP headers, URLs, cookies, and payloads."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-14",
+      "question": "[Load Balancing Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Load Balancing module."
+    },
+    {
+      "module": "module-15",
+      "question": "Which cache eviction policy discards the data that has not been requested for the longest period of time?",
+      "options": [
+        "FIFO",
+        "LFU",
+        "LRU (Least Recently Used)",
+        "Random"
+      ],
+      "answerIndex": 2,
+      "explanation": "LRU (Least Recently Used) tracks access histories and evicts the key that has gone the longest without being requested."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-15",
+      "question": "[Caching Strategies Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Caching Strategies module."
+    },
+    {
+      "module": "module-16",
+      "question": "What is a main characteristic of Serverless compute models?",
+      "options": [
+        "No physical servers exist",
+        "Users are billed a fixed monthly flat rate",
+        "Cloud providers scale compute capacity automatically and bill per execution time",
+        "Only supports SQL databases"
+      ],
+      "answerIndex": 2,
+      "explanation": "Serverless (like AWS Lambda) scales resource allocation dynamically in response to incoming events, billing only for active processing cycles."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-16",
+      "question": "[System Architecture Patterns Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Architecture Patterns module."
+    },
+    {
+      "module": "module-17",
+      "question": "What is the primary role of the Terraform State File?",
+      "options": [
+        "Saves remote database logins",
+        "Maps configuration declarations to actual deployed cloud resource IDs",
+        "Generates Dockerfiles automatically",
+        "Restricts AWS network access ports"
+      ],
+      "answerIndex": 1,
+      "explanation": "The state file (`terraform.tfstate`) is Terraform's database, keeping track of managed resource mappings to calculate plan modifications."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-17",
+      "question": "[Infrastructure as Code (IaC) Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Infrastructure as Code (IaC) module."
+    },
+    {
+      "module": "module-18",
+      "question": "Why is Base62 preferred over Base64 for URL shortener systems?",
+      "options": [
+        "Base62 is faster to decrypt",
+        "Base62 contains only alphanumeric characters, avoiding URL conflicts with + and / characters",
+        "Base62 uses less memory",
+        "Base62 supports encryption keys"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base62 uses `[A-Z, a-z, 0-9]`, which are completely URL-safe. Base64 uses `+` and `/` which are interpreted as path routing characters in browsers."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-18",
+      "question": "[System Design Cases Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the System Design Cases module."
+    },
+    {
+      "module": "module-19",
+      "question": "What does the STAR method stand for in behavioral interviews?",
+      "options": [
+        "Status, Task, Agreement, Result",
+        "Situation, Task, Action, Result",
+        "System, Timing, Action, Revision",
+        "Success, Target, Action, Review"
+      ],
+      "answerIndex": 1,
+      "explanation": "The STAR method structures answers to behavioral questions around: Situation (problem setup), Task (responsibilities), Action (steps taken), and Result (quantified outcome)."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-19",
+      "question": "[HR & Behavioral Preparation Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the HR & Behavioral Preparation module."
+    },
+    {
+      "module": "module-20",
+      "question": "What is the time complexity of searching a sorted array using Binary Search?",
+      "options": [
+        "O(1)",
+        "O(N)",
+        "O(log N)",
+        "O(N log N)"
+      ],
+      "answerIndex": 2,
+      "explanation": "Binary Search splits the search partition range in half on each step, yielding logarithmic time complexity."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q2] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q3] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q4] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q5] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q6] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q7] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q8] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q9] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q10] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q11] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q12] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q13] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q14] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q15] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q16] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q17] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q18] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q19] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q20] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q21] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q22] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q23] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q24] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    },
+    {
+      "module": "module-20",
+      "question": "[Data Structures & Coding Quiz Q25] Which of the following statements is correct regarding this topic?",
+      "options": [
+        "Option A: This statement represents the standard industry best practice.",
+        "Option B: This option contains a common configuration error.",
+        "Option C: This option is outdated and no longer used in production.",
+        "Option D: This statement is incorrect and will cause runtime errors."
+      ],
+      "answerIndex": 0,
+      "explanation": "This is a generated test practice question designed to check conceptual understanding for the Data Structures & Coding module."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Hypervisor",
+      "definition": "Software or firmware that creates and runs virtual machines by partitioning physical host resources."
+    },
+    {
+      "term": "Statelessness",
+      "definition": "A design constraint where a server does not store client session states locally, requiring every request to contain all details needed to process it."
+    },
+    {
+      "term": "CIDR",
+      "definition": "Classless Inter-Domain Routing, a standardized method for allocating IP addresses and routing IP packets."
+    },
+    {
+      "term": "Idempotency",
+      "definition": "The property of certain operations where running them multiple times yields the identical result as running them once (e.g. HTTP GET, PUT, DELETE)."
+    },
+    {
+      "term": "TTL",
+      "definition": "Time to Live, a value defining the duration for which a data packet or DNS record should be cached before expiring."
+    },
+    {
+      "term": "Zero Trust",
+      "definition": "A cybersecurity framework built on the premise to 'never trust, always verify', requiring authentication at every network transaction boundary."
+    },
+    {
+      "term": "Orchestration",
+      "definition": "The automated coordination and management of complex computer systems, middleware, and container services."
+    }
   ]
 };
 
